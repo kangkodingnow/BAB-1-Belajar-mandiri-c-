@@ -1,49 +1,15 @@
 #include <iostream>
-#include "var.cpp"
-//kelas penyimpanan extern
-extern int g;
-extern double h;
-
 using namespace std;
 
-//kelas penyimpanan auto
-
-double kali(double a, double b){
-    double c;
-    c = a * b;
-    return c;
-}
-
-//kelas penyimpanan non-static
-
-void nonstatic(){
-    int a{0};
-    a++;
-    cout << a << endl;
-}
-
-//kelas penyimpanan static
-
-void statis(){
-    static int d(20);
-    d++;
-    cout << d << endl;
-}
-
 int main(){
-    double a(10), b(12);
-    cout << kali(a, b) << endl;
-    nonstatic();
-    nonstatic();
-    nonstatic();
-    statis();
-    statis();
-    statis();
-    cout << "Nilai g adalah " << g << endl;
-    cout << "Nilai h adalah " << h << endl;
+    int a, b, c;
+    unsigned int f;
+    f = 20U;
+    cout << f << endl;
+    cout << "Masukkan tiga bilangan bulat: ";
+    cin >> a >> b >> c;
 
+    cout << "Anda memasukkan bilangan: " << a << " " << b << " " << c << " " << endl;
 
     return 0;
 }
-
-
