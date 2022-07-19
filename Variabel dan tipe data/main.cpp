@@ -6,25 +6,26 @@ struct Titik{
     int y;
 };
 
-enum Arah{
-        atas,
-        kanan,
-        bawah,
-        kiri
+enum class Arah
+{
+    atas,
+    kanan,
+    bawah,
+    kiri
 };
 
 void geserTitik(Titik &koordinat, Arah arah, int nilai){
     switch(arah){
-        case atas:
+        case Arah::atas:
             koordinat.y += nilai;
             break;
-        case kanan:
+        case Arah::kanan:
             koordinat.x += nilai;
             break;
-        case bawah:
+        case Arah::bawah:
             koordinat.y -= nilai;
             break;
-        case kiri:
+        case Arah::kiri:
             koordinat.x -= nilai;
             break;
     }
@@ -32,14 +33,13 @@ void geserTitik(Titik &koordinat, Arah arah, int nilai){
 
 int main(){
     Titik A;
-    A.x = 10;
-    A.y = 20;
+    A.x = 0;
+    A.y = 0;
 
-    cout << "Titik sebelum digeser: A(" << A.x << "," << A.y << ")";
-    geserTitik(A, kanan, 10);
-    geserTitik(A, atas, 2);
-
-    cout << "\nTitik setelah digeser: A(" << A.x << "," << A.y << ")" << endl;
+    cout << "Titik Sebelum Digeser: A(" << A.x << "," << A.y << ")" << endl;
+    geserTitik(A, Arah::kanan, 10);
+    geserTitik(A, Arah::atas, 2);
+    cout << "Titik Setelah Digeser: A(" << A.x << "," << A.y << ")" << endl;
 
     return 0;
 }
