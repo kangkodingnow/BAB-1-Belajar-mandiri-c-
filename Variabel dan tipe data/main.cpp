@@ -1,29 +1,32 @@
 #include <iostream>
-#include <string>
+#include <cstdlib>
 using namespace std;
 
-//convert lower case menjadi upper case
 int main(){
-    // for (int i = 65; i <= 90; i++){
-    //     cout << i << " = \'" << (char)i << "\'\t\t" << i + 32 << " = \'" << (char)(i + 32) << "\'" << endl;
-    // }
-    // cout << "aku \' kamu" << endl;
-    string s, temp;
-    cout << "Masukkan teks: ";
-    getline(cin, s);
-    temp = "";
-    for (unsigned int i = 0; i <= s.size(); i++){
-        char c = s[i];
-        int ascii = (int)c;
-        if(ascii >= 97 && ascii <= 122){
-            temp += (char)(ascii - 32);
-        }else{
-            temp += c;
-        }
+    unsigned int a{20};
+    long b{1234};
+    unsigned long c{123456};
+    unsigned long long d{12345678};
+    unsigned int pin;
+    unsigned int jumlah{0};
+
+    do{
+        cout << "Masukkan PIN: ";
+        cin >> pin;
+        jumlah++;
+    } while (jumlah < 3 && pin != 123456U);
+
+    if(jumlah == 3){
+        cout << "\nAnda sudah salah 3x memasukkan PIN, Akun diblokir!" << endl;
+    }else{
+        cout << "\nSelamat, Anda berhasil login.";
     }
-    cout << s.size() << endl;
-    cout << "\nSebelum diubah: " << s << endl;
-    cout << "setelah diubah: " << temp << endl;
+
+    cout << "\n" << endl;
+    cout << sizeof(a) << endl;
+    cout << b << endl;
+    cout << c << endl;
+    cout << d << endl;
 
     return 0;
 }
