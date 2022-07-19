@@ -1,23 +1,20 @@
 #include <iostream>
 using namespace std;
 
-int a;
-
-void increment(){
-    a++;
-}
-
-void decrement(){
-    a--;
-}
-
 int main(){
-    a = 10;
-    cout << "Nilai a mula-mula: " << a << endl;
-    increment();
-    cout << "Setelah dinaikkan 1: " << a << endl;
-    decrement();
-    cout << "setelah diturunkan 1: " << a << endl;
+    int n;
+    cout << "Masukkan jumlah data: ";
+    cin >> n;
+
+    double a[n];
+    double total {0.0};
+    for (int i = 0; i < n; i++){
+        cout << "Data ke-" << (i+1) << ": ";
+        cin >> a[i];
+        total += a[i];
+    }
+
+    cout << "\nRata-rata: " << total / n << endl;
 
     return 0;
 }
