@@ -2,19 +2,24 @@
 using namespace std;
 
 int main(){
-    int n;
-    cout << "Masukkan jumlah data: ";
-    cin >> n;
-
-    double a[n];
-    double total {0.0};
-    for (int i = 0; i < n; i++){
-        cout << "Data ke-" << (i+1) << ": ";
-        cin >> a[i];
-        total += a[i];
-    }
-
-    cout << "\nRata-rata: " << total / n << endl;
+    enum MataAngin
+    {
+        Timur = 1,
+        Tenggara,
+        Selatan,
+        BaratDaya,
+        Barat,
+        BaratLaut,
+        Utara,
+        TimurLaut
+    };
+    cout << "Timur\t\t: " << Timur << endl;
+    cout << "Tenggara\t: " << Tenggara << endl;
+    cout << "Selatan\t\t: " << Selatan << endl;
+    cout << "BaratDaya\t: " << BaratDaya << endl;
+    cout << "Barat\t\t: " << Barat << endl;
+    cout << "Utara\t\t: " << Utara << endl;
+    cout << "TimurLaut\t: " << TimurLaut << endl;
 
     return 0;
 }
