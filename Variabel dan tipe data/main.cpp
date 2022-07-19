@@ -1,27 +1,49 @@
 #include <iostream>
-using namespace std;
-class C{
-    public:
-        mutable double a;
-        double b;
+#include "var.cpp"
+//kelas penyimpanan extern
+extern int g;
+extern double h;
 
-        //kontruktor
-        C(double a, double b){
-            this->a = a;
-            this->b = b;
-        }
-};
+using namespace std;
+
+//kelas penyimpanan auto
+
+double kali(double a, double b){
+    double c;
+    c = a * b;
+    return c;
+}
+
+//kelas penyimpanan non-static
+
+void nonstatic(){
+    int a{0};
+    a++;
+    cout << a << endl;
+}
+
+//kelas penyimpanan static
+
+void statis(){
+    static int d(20);
+    d++;
+    cout << d << endl;
+}
 
 int main(){
-    const C obj = C(10.0, 20.0);
-    cout << "Sebelum diubah " << endl;
-    cout << "Nilai a: " << obj.a << endl;
-    cout << "Nilai b: " << obj.b << endl;
+    double a(10), b(12);
+    cout << kali(a, b) << endl;
+    nonstatic();
+    nonstatic();
+    nonstatic();
+    statis();
+    statis();
+    statis();
+    cout << "Nilai g adalah " << g << endl;
+    cout << "Nilai h adalah " << h << endl;
 
-    obj.a = 100.0;
-    cout << "\nSetelah diubah " << endl;
-    cout << "Nilai a: " << obj.a << endl;
-    cout << "Nilai b: " << obj.b << endl;
 
     return 0;
 }
+
+
