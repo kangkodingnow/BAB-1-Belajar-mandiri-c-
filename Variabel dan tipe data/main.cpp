@@ -1,25 +1,27 @@
 #include <iostream>
 using namespace std;
+class C{
+    public:
+        mutable double a;
+        double b;
+
+        //kontruktor
+        C(double a, double b){
+            this->a = a;
+            this->b = b;
+        }
+};
 
 int main(){
-    int a = 3;      //inisialisasi variabel cara 1
-    int b{10};      //inisialisasi variabel cara 2
-    int c(12);      //inisialisasi variabel cara 3
+    const C obj = C(10.0, 20.0);
+    cout << "Sebelum diubah " << endl;
+    cout << "Nilai a: " << obj.a << endl;
+    cout << "Nilai b: " << obj.b << endl;
 
-    cout << a << endl;
-    for (int i = 0; i < a;i++){
-        cout << i << " ";
-    }
-    cout << endl;
-    cout << b << endl;
-    for (int i = 0; i < b;i++){
-        cout << i << " ";
-    }
-    cout << endl;
-    cout << c << endl;
-    for (int i = 0; i < c;i++){
-        cout << i << " ";
-    }
+    obj.a = 100.0;
+    cout << "\nSetelah diubah " << endl;
+    cout << "Nilai a: " << obj.a << endl;
+    cout << "Nilai b: " << obj.b << endl;
 
     return 0;
 }
