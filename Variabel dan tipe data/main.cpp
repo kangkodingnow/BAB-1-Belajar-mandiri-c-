@@ -1,53 +1,15 @@
 #include <iostream>
+#include <typeinfo>
 using namespace std;
-
-enum class Arah
-{
-    atas,
-    kanan,
-    bawah,
-    kiri
-};
-
-class Titik{
-public:
-    int x;
-    int y;
-    //fungsi
-    void geser(Arah arah, int nilai){
-        switch(arah){
-            case Arah::atas:
-                y += nilai;
-                break;
-            case Arah::kanan:
-                x += nilai;
-                break;
-            case Arah::bawah:
-                y += nilai;
-                break;
-            case Arah::kiri:
-                x += nilai;
-                break;
-        }
-    }
-
-    void tulis(){
-        cout << "(" << x << "," << y << ")" << endl;
-    }
-};
-
-
 int main(){
-    Titik A;
-    A.x = 0;
-    A.y = 0;
+    auto x = 10;
+    auto y{10.0F};
+    auto z(10.0);
 
-    cout << "Titik sebelum digeser: A";
-    A.tulis();
-    A.geser(Arah::kanan, 10);
-    A.geser(Arah::atas, 2);
-    cout << "\nTitik setelah digeser: A";
-    A.tulis();
+    cout << "Tipe x: " << typeid(x).name() << endl;
+    cout << "Tipe y: " << typeid(y).name() << endl;
+    cout << "Tipe z: " << typeid(z).name() << endl;
+    cout << x << " " << y << " " << z << endl;
 
     return 0;
 }
