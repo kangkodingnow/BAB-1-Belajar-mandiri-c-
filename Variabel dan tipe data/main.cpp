@@ -1,10 +1,6 @@
 #include <iostream>
 using namespace std;
 
-struct Titik{
-    int x;
-    int y;
-};
 enum class Arah
 {
     atas,
@@ -13,32 +9,44 @@ enum class Arah
     kiri
 };
 
-void geserTitik(Titik &koordinat, Arah arah, int nilai){
-    switch(arah){
-        case Arah::atas:
-            koordinat.y += nilai;
-            break;
-        case Arah::kanan:
-            koordinat.x += nilai;
-            break;
-        case Arah::bawah:
-            koordinat.y -= nilai;
-            break;
-        case Arah::kiri:
-            koordinat.x -= nilai;
-            break;
+struct Titik{
+    int x;
+    int y;
+    //fungsi
+    void geser(Arah arah, int nilai){
+        switch(arah){
+            case Arah::atas:
+                y += nilai;
+                break;
+            case Arah::kanan:
+                x += nilai;
+                break;
+            case Arah::bawah:
+                y += nilai;
+                break;
+            case Arah::kiri:
+                x += nilai;
+                break;
+        }
     }
-}
+
+    void tulis(){
+        cout << "(" << x << "," << y << ")" << endl;
+    }
+};
+
 
 int main(){
     Titik A;
     A.x = 0;
     A.y = 0;
-    printf("Nilai x: %d\n", A.x);
-    cout << "Titik Sebelum Digeser: A(" << A.x << "," << A.y << ")" << endl;
-    geserTitik(A, Arah::kanan, 10);
-    geserTitik(A, Arah::atas, 2);
-    cout << "Titik Setelah Digeser: A(" << A.x << "," << A.y << ")" << endl;
-    printf("Nilai x: %d\n", A.x);
+
+    cout << "Titik sebelum digeser: A";
+    A.tulis();
+    A.geser(Arah::kanan, 10);
+    A.geser(Arah::atas, 2);
+    cout << "\nTitik setelah digeser: A";
+    A.tulis();
+
     return 0;
 }
