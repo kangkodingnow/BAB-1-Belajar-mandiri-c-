@@ -1,12 +1,17 @@
 #include <iostream>
 using namespace std;
 
+typedef unsigned int ui;
+
 int main(){
-    for (int i = 0; i < 26; i++){
-        char c;
-        c = (char)(i + 65);
-        cout << c << " ";
-    }
+    ui p, l;
+    cout << "Menghitung Luas dan Keliling persegi panjang" << endl;
+    cout << "Masukkan panjang ";
+    cin >> p;
+    cout << "Masukkan lebar: ";
+    cin >> l;
+    cout << "\nLuas\t\t= " << p * l << endl;
+    cout << "Keliling \t= " << 2 * (p + l) << endl;
 
     return 0;
 }
