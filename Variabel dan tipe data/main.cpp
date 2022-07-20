@@ -9,7 +9,8 @@ enum class Arah
     kiri
 };
 
-struct Titik{
+class Titik{
+public:
     int x;
     int y;
     //fungsi
