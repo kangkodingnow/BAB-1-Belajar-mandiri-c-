@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-typedef unsigned int ui;
+using ui = unsigned int;
 
 int main(){
     ui p, l;
