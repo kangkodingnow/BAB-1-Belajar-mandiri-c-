@@ -1,24 +1,18 @@
 #include <iostream>
 using namespace std;
 
-double luas(double p, double l){
-    return p * l;
-}
-
-double keliling(double p, double l){
-    return 2 * (p + l);
+void f(int &a){
+    cout << "\nDi dalam fungsi" << endl;
+    cout << "Nilai a sebelum diubah: " << a << endl;
+    a++;
+    cout << "Nilai a setelah diubah: " << a << endl;
 }
 
 int main(){
-    double panjang, lebar;
-    cout << "=====Program luas dan keliling persegi panjang======" << endl;
-    cout << "Masukkan panjang: ";
-    cin >> panjang;
-    cout << "Masukkan lebar: ";
-    cin >> lebar;
-
-    cout << "\nLuas\t\t= " << luas(panjang, lebar) << endl;
-    cout << "Keliling\t= " << keliling(panjang, lebar) << endl;
+    int b{5};
+    cout << "Nilai b sebelum pemanggilan fungsi f(): " << b << endl;
+    f(b);
+    cout << "\nNilai b setelah pemanggilan fungsi f(): " << b << endl;
 
     return 0;
 }
