@@ -1,23 +1,19 @@
 #include <iostream>
-#include <string>
-
 using namespace std;
 
-const string USERNAME{"admin"};
-const string PASSWORD{"Abc123"};
-
 int main(){
-    string username, password;
-
-    do{
-        cout << "Username: ";
-        cin >> username;
-        cout << "Password: ";
-        cin >> password;
+    string data[4][3] = {{"ATK01", "Spidol", "9000"}, {"ATK02", "Pensil", "6000"}, {"ATK03", "Stabilo", "11000"}, {"ATK04", "Tinta", "23000"}};
+    for (int i = 0; i < 4; i++){
+        cout << i + 1 << ". ";
+        for (int j = 0; j < 3; j++){
+            cout << data[i][j];
+            if(j < 2){
+                cout << ", ";
+            }
+        }
         cout << endl;
-    } while (username.compare(USERNAME) != 0 || password.compare(PASSWORD) != 0);
-
-    cout << "Selamat datang, " << username << endl;
+    }
 
     return 0;
 }
+
