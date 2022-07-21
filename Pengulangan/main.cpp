@@ -17,6 +17,8 @@ int main(){
     int x;
     bool ketemu;
     ketemu = 0;
+    system("cls");
+    system("PAUSE");
     display(data);
     cout << "Masukkan nilai yang dicari: ";
     cin >> x;
