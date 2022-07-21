@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-void increment(int &x, int step){
-    x += step;
+void increment(int *x, int step){
+    *x += step;
 }
 
 int main(){
@@ -12,7 +12,7 @@ int main(){
     cout << "\nSebelum dinaikkan" << endl;
     cout << "bil = " << bil << endl;
 
-    increment(bil, 3);
+    increment(&bil, 3);
     cout << "\nSebelum dinaikkan" << endl;
     cout << "bil = " << bil << endl;
 
