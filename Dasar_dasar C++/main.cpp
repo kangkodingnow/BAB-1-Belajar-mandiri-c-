@@ -1,21 +1,15 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-void increment(int *x, int step){
-    *x += step;
+void print(string s, char end='\n'){
+    cout << s << end;
 }
 
 int main(){
-    int bil;
-    cout << "Masukkan bilangan bulat: ";
-    cin >> bil;
-    cout << "\nSebelum dinaikkan" << endl;
-    cout << "bil = " << bil << endl;
-
-    increment(&bil, 3);
-    cout << "\nSebelum dinaikkan" << endl;
-    cout << "bil = " << bil << endl;
+    print("Belajar");
+    print("Pemrograman", ' ');
+    print("C++");
 
     return 0;
 }
-
