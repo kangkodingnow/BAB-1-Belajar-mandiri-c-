@@ -1,12 +1,11 @@
 #include <iostream>
 using namespace std;
 
+class contoh{
+        public:
+            static int a;
+};
 int main(){
-    int a, b;
-    cout << "Masukkan bilangan bulat: ";
-    cin >> a;
-    b = (a < 0) ? -a : a;
-    cout << "|" << a << "| = " << b << endl;
-
+    contoh::a = 10;
     return 0;
 }
