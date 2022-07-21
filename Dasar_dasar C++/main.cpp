@@ -1,18 +1,28 @@
 #include <iostream>
 using namespace std;
 
-void f(int &a){
-    cout << "\nDi dalam fungsi" << endl;
-    cout << "Nilai a sebelum diubah: " << a << endl;
-    a++;
-    cout << "Nilai a setelah diubah: " << a << endl;
+void tukar(int &a, int &b){
+    int temp = a;
+    a = b;
+    b = temp;
 }
 
 int main(){
-    int b{5};
-    cout << "Nilai b sebelum pemanggilan fungsi f(): " << b << endl;
-    f(b);
-    cout << "\nNilai b setelah pemanggilan fungsi f(): " << b << endl;
+    int bil1, bil2;
+    cout << "Masukkan bilangan ke-1: ";
+    cin >> bil1;
+    cout << "Masukkan bilangan ke-2: ";
+    cin >> bil2;
+
+    cout << "\nSebelum ditukar" << endl;
+    cout << "bil1 = " << bil1 << endl;
+    cout << "bil2 = " << bil2 << endl;
+
+    tukar(bil1, bil2);
+
+    cout << "\nSetelah ditukar" << endl;
+    cout << "bil1 = " << bil1 << endl;
+    cout << "bil2 = " << bil2 << endl;
 
     return 0;
 }
