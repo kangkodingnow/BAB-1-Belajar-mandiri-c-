@@ -2,49 +2,34 @@
 using namespace std;
 
 int main(){
+    //mendeklarasikan variabel
     int a{10};
-    double b{20.5};
-    float c{1.23F};
-    bool d{true};
+    double b{20.0};
 
-    //mendeklarasikan ponter bertipe void
-    void *p;
+    //mendeklarasikan pointer
+    int *p1;
+    double *p2;
 
-    //pointer p menunjuk ke alamat a
-    p = &a;
-    cout << "Ketika p menunjuk ke alamat a" << endl;
+    //pointer p1 menunjuk ke alamat a
+    p1 = &a;
+
+    //pointer p1 menunjuk ke alamat b
+    //p1 = &b;      salah
+
+    //pointer p2 menunjuk ke alamat b
+    p2 = &b;
+
     cout << "a\t= " << a << endl;
     cout << "&a\t= " << &a << endl;
-    cout << "*p\t= " << *((int *)p) << endl;
-    cout << "p\t= " << p << endl;
-    cout << "&p\t= " << &p << endl;
+    cout << "*p1\t= " << *p1 << endl;
+    cout << "p1\t= " << p1 << endl;
+    cout << "&p1\t= " << &p1 << endl;
 
-    //pointer p menunjuk ke alamat b
-    p = &b;
-    cout << "\nKetika p menunjuk ke alamat b" << endl;
-    cout << "b\t= " << b << endl;
+    cout << "\nb\t= " << b << endl;
     cout << "&b\t= " << &b << endl;
-    cout << "*p\t= " << *((double *)p) << endl;
-    cout << "p\t= " << p << endl;
-    cout << "&p\t= " << &p << endl;
-
-    //pointer p menunjuk ke alamat c
-    p = &c;
-    cout << "\n Ketika p menunjuk ke alamat c" << endl;
-    cout << "c\t= " << c << endl;
-    cout << "&c\t= " << &c << endl;
-    cout << "*p\t= " << *((double *)p) << endl;
-    cout << "p\t= " << p << endl;
-    cout << "&p\t= " << &p << endl;
-
-    //pointer p menunjuk ke alamat d
-    p = &d;
-    cout << "\n Ketika p menunjuk ke alamat d" << endl;
-    cout << "d\t= " << d << endl;
-    cout << "&d\t= " << &d << endl;
-    cout << "*p\t= " << *((double *)p) << endl;
-    cout << "p\t= " << p << endl;
-    cout << "&p\t= " << &p << endl;
+    cout << "*p2\t= " << *p2 << endl;
+    cout << "p2\t= " << p2 << endl;
+    cout << "&p2\t= " << &p2 << endl;
 
     return 0;
 }
