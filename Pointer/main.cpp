@@ -2,34 +2,12 @@
 using namespace std;
 
 int main(){
-    //mendeklarasikan variabel
-    int a{10};
-    double b{20.0};
-
-    //mendeklarasikan pointer
-    int *p1;
-    double *p2;
-
-    //pointer p1 menunjuk ke alamat a
-    p1 = &a;
-
-    //pointer p1 menunjuk ke alamat b
-    //p1 = &b;      salah
-
-    //pointer p2 menunjuk ke alamat b
-    p2 = &b;
-
-    cout << "a\t= " << a << endl;
-    cout << "&a\t= " << &a << endl;
-    cout << "*p1\t= " << *p1 << endl;
-    cout << "p1\t= " << p1 << endl;
-    cout << "&p1\t= " << &p1 << endl;
-
-    cout << "\nb\t= " << b << endl;
-    cout << "&b\t= " << &b << endl;
-    cout << "*p2\t= " << *p2 << endl;
-    cout << "p2\t= " << p2 << endl;
-    cout << "&p2\t= " << &p2 << endl;
+    int data[5] = {100, 200, 300, 400, 500};
+    int *p;
+    p = data; //tidak perlu ditulis p = &data
+    for (int i = 0; i < 5; i++){
+        cout << "p[" << i << "] = " << p[i] << endl;
+    }
 
     return 0;
 }
