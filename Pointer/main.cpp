@@ -3,15 +3,21 @@ using namespace std;
 
 int main(){
     int *p;
-
-    p = new int[3];
-    for (int i = 0; i < 3; i++){
-        p[i] = (i + 1) * 100;
-        cout << p[i] << endl;
-        cout << &p[i] << endl;
-    }
+    
+    p = new int;
+    *p = 2;
 
     delete[] p;
+    
+    p = new int;
+    *p = 3;
+
+    cout << p[0] << endl;
+    cout << &p[0] << endl;
+    cout << *p << endl;
+    //cout << *p[0] << endl;
+    cout << p[1] << endl;
+    cout << &p[1] << endl;
 
     return 0;
 }
