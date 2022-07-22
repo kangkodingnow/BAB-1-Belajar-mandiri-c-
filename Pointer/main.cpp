@@ -2,22 +2,24 @@
 using namespace std;
 
 int main(){
-    int *p;
-    
-    p = new int;
-    *p = 2;
+    int a{10};
+    int &ra = a;
 
-    delete[] p;
-    
-    p = new int;
-    *p = 3;
+    cout << "Sebelum a dan ra diubah" << endl;
+    cout << "a\t= " << a << endl;
+    cout << "ra\t= " << ra << endl;
 
-    cout << p[0] << endl;
-    cout << &p[0] << endl;
-    cout << *p << endl;
-    //cout << *p[0] << endl;
-    cout << p[1] << endl;
-    cout << &p[1] << endl;
+    //mengubah nilai a
+    a = 20;
+    cout << "Setelah a diubah" << endl;
+    cout << "a\t= " << a << endl;
+    cout << "ra\t= " << ra << endl;
+
+    //mengubah nilai ra
+    ra = 100;
+    cout << "Setelah ra diubah" << endl;
+    cout << "a\t= " << a << endl;
+    cout << "ra\t= " << ra << endl;
 
     return 0;
 }
