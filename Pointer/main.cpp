@@ -1,25 +1,32 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 int main(){
-    int a{9};
-    int *p1;
-    int **p2;
+    char **bahasa;
+    bahasa = new char *[10];
 
-    p1 = &a;
-    p2 = &p1;
+    bahasa[0] = new char[2];
+    strcpy(bahasa[0], "C");
 
-    cout << "a\t = " << a << endl;
-    cout << "&a\t = " << &a << endl;
+    bahasa[1] = new char[3];
+    strcpy(bahasa[1], "Java");
 
-    cout << "\n*p1\t = " << *p1 << endl;
-    cout << "p1\t = " << p1 << endl;
-    cout << "&p1\t = " << &p1 << endl;
+    bahasa[2] = new char[4];
+    strcpy(bahasa[2], "C++");
 
-    cout << "\n*p2\t = " << *p2 << endl;
-    cout << "**p2\t = " << **p2 << endl;
-    cout << "p2\t = " << p2 << endl;
-    cout << "&p2\t = " << *p2 << endl;
+    bahasa[3] = new char[1];
+    strcpy(bahasa[3], "Java Script");
+
+    bahasa[4] = new char[3];
+    strcpy(bahasa[4], "html");
+
+    for (int i = 0; i < 5; i++){
+        cout << bahasa[i] << endl;
+        delete [] bahasa[i];
+    }
+
+    delete [] bahasa;
 
     return 0;
 }
