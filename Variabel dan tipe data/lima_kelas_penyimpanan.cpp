@@ -1,5 +1,6 @@
 #include <iostream>
 #include "var.cpp"
+//kelas penyimpanan extern
 extern int g;
 extern double h;
 

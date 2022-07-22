@@ -2,6 +2,7 @@
 #include <string>
 using namespace std;
 
+//convert lower case menjadi upper case
 int main(){
     // for (int i = 65; i <= 90; i++){
     //     cout << i << " = \'" << (char)i << "\'\t\t" << i + 32 << " = \'" << (char)(i + 32) << "\'" << endl;
@@ -10,7 +11,6 @@ int main(){
     string s, temp;
     cout << "Masukkan teks: ";
     getline(cin, s);
-
     temp = "";
     for (unsigned int i = 0; i <= s.size(); i++){
         char c = s[i];
