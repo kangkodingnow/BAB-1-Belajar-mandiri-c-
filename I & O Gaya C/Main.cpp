@@ -1,24 +1,48 @@
 #include <iostream>
+#include <cstring>
+#include <cstdlib>
 #include <cstdio>
 
 using namespace std;
 
+double strToFloat(char *s){
+    return strtod(s, NULL);
+}
+
+int strToInt(char *s){
+    return (int)strtod(s, NULL);
+}
+
+char* floatToStr(double d){
+    char *s = (char *)malloc(20 * sizeof(char));
+    sprintf(s, "%lf", d);
+    return s;
+}
+char* intToStr(int i){
+    char *s = (char *)malloc(10 * sizeof(char));
+    sprintf(s, "%d", i);
+    return s;
+}
+
 int main(int argc, char const *argv[])
 {
-    int p = 13;
+    char s1[6] = "12.34";
+    char s2[3] = "10";
+    double d = 56.78;
+    int i = 8;9
+    char *s3, *s4;
 
-    printf("%%d dan %%i: %d dan %i\n", 45, 54);
-    printf("%%u : %u\n", 45);
-    printf("%%o: %o\n", 10);
-    printf("%%x dan %%X: %x dan %X\n", 15, 15);
-    printf("%%f dan %%F: %f dan %f\n", -1.234, 1.234);
-    printf("%%e dan %%E: %e dan %E\n", 0.00045, 0.000045);
-    printf("%%g dan %%G: %g dan %G\n", 0.00045, 0.00045);
-    printf("%%a dan %%A: %a dan %A\n", 33.0, 33.0);
-    printf("%%c: %c\n", 'b');
-    printf("%%s: %s\n", "Menggunakan printf() dalam C++");
-    printf("%%p: %p\n", &p);
-    printf("Menampilkan tanda %%\n");
+    cout << s1 << " + " << s2 << " = ";
+    cout << strToFloat(s1) + strToInt(s2) << endl;
+
+    s3 = floatToStr(d);
+    s4 = intToStr(i);
+
+    cout << "\ns3\t\t: " << s3 << endl;
+    cout << "strlen(s3)\t: " << strlen(s3) << endl;
+    cout << "s4\t\t: " << s4 << endl;
+    cout << "strlen(s4)\t: " << strlen(s4) << endl;
+
 
     return 0;
 }
