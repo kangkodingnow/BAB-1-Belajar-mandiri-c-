@@ -29,7 +29,7 @@ int main(int argc, char const *argv[])
     char s1[6] = "12.34";
     char s2[3] = "10";
     double d = 56.78;
-    int i = 8;9
+    int i = 89;
     char *s3, *s4;
 
     cout << s1 << " + " << s2 << " = ";
