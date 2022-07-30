@@ -5,18 +5,16 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    int a;
-    long b;
-    long long c;
-
+    float a;
+    double b;
+    int c = 10;
+    char *d;
+    sprintf(d, "%d", c);
     printf("Masukkan nilai a: ");
-    scanf("%d", &a);
+    scanf("%f", &a);
     printf("Masukkan nilai b: ");
-    scanf("%ld", &b);
-    printf("Masukkan nilai c: ");
-    scanf("%lld", &c);
+    scanf("%lf", &b);
 
-    printf("\nData yang dimasukkan: %d, %ld, dan %lld\n", a, b, c);
-
+    printf("\nData yang dimasukkan: %f dan %lf\n", a, b);
     return 0;
 }
