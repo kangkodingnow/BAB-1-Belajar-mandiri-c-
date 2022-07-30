@@ -1,23 +1,22 @@
 #include <iostream>
-// #include <cctype>
+#include <cstdio>
 
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    char c;
-    printf("Masukkan data bertipe karakter: ");
-    scanf("%c", &c);
-    
-    if(isdigit(c)){
-        printf("'%c' adalah karakter angka", c);
-    }else if(isalpha(c)){
-        printf("'%c' adalah karakter huruf", c);
-    }else{
-        printf("'%c' adalah karakter simbol", c);
-    }
+    int a;
+    long b;
+    long long c;
 
-    cout << endl;
+    printf("Masukkan nilai a: ");
+    scanf("%d", &a);
+    printf("Masukkan nilai b: ");
+    scanf("%ld", &b);
+    printf("Masukkan nilai c: ");
+    scanf("%lld", &c);
+
+    printf("\nData yang dimasukkan: %d, %ld, dan %lld\n", a, b, c);
 
     return 0;
 }
